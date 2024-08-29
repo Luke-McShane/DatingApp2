@@ -1,2 +1,13 @@
 <h1>{{title}}</h1>
-<h2>{{eggBean}}</h2>
+
+<ul>
+  <!-- anything that begins with a '*' shows that it is a structural directive, which means it directly affects the DOM 
+  <li *ngFor="let user of users">
+    {{user.id}} - {{user.userName}}
+  </li> -->
+  @for (user of users; track user.id) {
+    <li>
+      {{user.id}} - {{user.userName}}
+    </li>
+  }
+</ul>
